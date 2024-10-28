@@ -16,9 +16,14 @@
     </style>
   </head>
   <body>
-    <h1>Einstein Tiling Generator - Alexandre Borghi</h1>
-    <canvas width="1920" height="1080"></canvas>
-
+<header class="page-header" role="banner">
+      <h1 class="project-name">{{ site.title | default: site.github.repository_name }}</h1>
+      <h2 class="project-tagline">{{ site.github.project_tagline }}</h2>
+      <canvas width="1920" height="1080"></canvas>
+      {% if site.github.is_project_page %}
+        <a href="{{ site.github.repository_url }}" class="btn">View on GitHub</a>
+      {% endif %}
+    </header>
     <script type="module">
       import einstein_tiling from "./einstein_tiling.js";
       einstein_tiling();
